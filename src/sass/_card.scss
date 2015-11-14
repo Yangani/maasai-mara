@@ -15,14 +15,14 @@
 }
 
 
-.bird-card-wrapper{
+.animal-card-wrapper{
    @extend %absolute;
    @include transition(all, $delay);
-   .bird-hero{
+   .animal-hero{
     @include transition(all, $delay);
     line-height: 1;
     height: 29.412vw;
-    background: url("./../birds.png");
+    background: url("./../animals.png");
     img{
       height: 29.412vw;
       width: auto;
@@ -30,18 +30,18 @@
       overflow: hidden;
     }
    }
-   .bird-info{
+   .animal-info{
     @include transition(all, $delay);
     background-color: $darker;
-    background-image: url("./../birds-dark.png");
+    background-image: url("./../animals-dark.png");
     z-index: 100;
    }
   .opening &{
     overflow: hidden;
-    .bird-hero{
+    .animal-hero{
       @include translate(0, -100%);
     }
-    .bird-info{
+    .animal-info{
       @include translate(0, 100%);
     }
   }
@@ -51,10 +51,10 @@
     overflow-y: auto;
 
 
-    .bird-hero{
+    .animal-hero{
       @include translate(0, 0);
     }
-    .bird-info{
+    .animal-info{
       @include translate(0, 0);
       min-height: calc(100vh - 30vw);
     }
@@ -62,10 +62,10 @@
   .closing &{
     overflow: hidden;
     @extend %fixed;
-    .bird-hero{
+    .animal-hero{
       @include translate(0, -100%);
     }
-    .bird-info{
+    .animal-info{
       @include translate(0, 100%);
     }
 
