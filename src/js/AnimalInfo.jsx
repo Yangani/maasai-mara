@@ -32,7 +32,8 @@ var AnimalInfo = React.createClass({
           <div className='profile center clearfix py4 px0'><a href={this.props.data.profile}>view animal profile on environment.gov.au<span className="icon icon-link-external"></span></a></div>
           <AnimalAttribute attribute={this.props.data.attributes}/>
           </div>
-      
+          </div>
+          </div>
         );
       } 
   });
