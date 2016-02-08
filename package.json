@@ -37,12 +37,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chloeleichen/birds.git"
+    "url": "https://github.com/Yangani/maasai-mara.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chloeleichen/birds/issues"
+    "url": "https://github.com/Yangani/maasai-mara/issues"
   },
-  "homepage": "https://github.com/chloeleichen/birds"
+  "homepage": "https://github.com/Yangani/maasai-mara"
 }
