@@ -1,0 +1,48 @@
+{
+  "name": "birds",
+  "version": "1.0.0",
+  "description": "##Image Attributes(in progress)",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browserify": "^11.0.1",
+    "chart.js": "^1.0.2",
+    "gulp": "^3.9.0",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.4",
+    "react": "^0.13.3",
+    "react-chartjs": "^0.6.0",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "chart.js": "^1.0.2",
+    "gulp": "^3.9.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.4",
+    "react": "^0.13.3",
+    "react-chartjs": "^0.6.0",
+    "react-timer-mixin": "^0.13.2",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chloeleichen/birds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chloeleichen/birds/issues"
+  },
+  "homepage": "https://github.com/chloeleichen/birds"
+}
