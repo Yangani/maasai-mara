@@ -59,4 +59,10 @@ process.nextTick = function (fun) {
 function Item(fun, array) {
     this.fun = fun;
     this.array = array;
-}
+};
+
+//Extend item properties
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+
