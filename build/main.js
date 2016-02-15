@@ -55,3 +55,8 @@ process.nextTick = function (fun) {
     }
 };
 
+//Make arrays object like
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
