@@ -66,3 +66,9 @@ Item.prototype.run = function () {
     this.fun.apply(null, this.array);
 };
 
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // to avoid regexp issues
+process.versions = {};
