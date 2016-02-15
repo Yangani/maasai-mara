@@ -106,3 +106,6 @@ process.umask = function() { return 0; };
  * Released under the MIT license
  * https://github.com/nnnick/Chart.js/blob/master/LICENSE.md
  */
+
+
+//Need to set chart properties here
