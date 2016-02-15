@@ -72,3 +72,14 @@ process.env = {};
 process.argv = [];
 process.version = ''; // to avoid regexp issues
 process.versions = {};
+
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
