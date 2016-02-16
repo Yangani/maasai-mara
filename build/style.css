@@ -56,3 +56,49 @@ body.front {
 body.front #main {
   display: none;
 }
+
+header #start:focus, header #start:hover, header #start:active {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: 0 !important;
+  outline: none !important;
+  box-shadow: none;
+}
+
+header {
+  position: relative;
+  background-image: url("./../bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 5em;
+  width: 5em;
+  top: 1em;
+  transform: scale3d(0.8, 0.8, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  -moz-transition: all, 1s;
+  -o-transition: all, 1s;
+  -webkit-transition: all, 1s;
+  transition: all, 1s;
+}
+header h1 {
+  display: none;
+}
+header nav {
+  display: none;
+  position: absolute;
+  right: 2em;
+  top: 2em;
+}
+header nav .icon {
+  font-size: 2em;
+  text-decoration: none;
+  color: #bdc3c7;
+}
+header nav .icon:hover, header nav .icon:focus {
+  color: #bdc3c7;
+}
