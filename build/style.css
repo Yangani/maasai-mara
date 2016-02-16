@@ -29,3 +29,17 @@ a {
 a a:hover, a a:focus {
   color: #f3817f;
 }
+
+h1, h2, h3 {
+  font-family: "Viga", sans-serif;
+  font-weight: 700;
+}
+
+.sci-name {
+  font-family: "Marck Script", cursive;
+  font-size: 1.5em;
+}
+
+label {
+  font-family: "Viga", Helvetica, sans-serif;
+}
