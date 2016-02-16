@@ -22,3 +22,10 @@ body {
   color: #bdc3c7;
   font-family: "Viga", sans-serif;
 }
+
+a {
+  color: #ef5350;
+}
+a a:hover, a a:focus {
+  color: #f3817f;
+}
