@@ -1,6 +1,7 @@
 ;(function() {
   'use strict';
-  //Selecting DOM elements
+
+  //Select DOM elements 
   var imghero = document.getElementById('tilt-mover'),
       header = document.getElementById('header'),
       tilt = document.getElementById('tilt'),
@@ -13,7 +14,7 @@
         body.classList.toggle('front');
       });
 
-  //Dynamic display for the images on the DOM window
+  //Dynamic display
   var win = { width: window.innerWidth, height: window.innerHeight };
   function throttle(fn, delay) {
     var allowSample = true;
@@ -25,13 +26,13 @@
       }
     };
   }
-
-  //For touch devices
+  
+  //Checking if the device is touch? e.g iPad
   function is_touch_device() {
    return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
   }
-
-  //For non touch devices
+   
+  //Functionality for non-touch devices
   if (!is_touch_device()) {
       var exHandler = function(ev){
         imghero.style.WebkitTransform = 'perspective(1000px) translate3d(0,0,0) rotate3d(1,1,1,0deg)';
