@@ -1,2 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Marck+Script);
 @import url(http://fonts.googleapis.com/css?family=Viga);
+img.loaded {
+  width: 100%;
+  height: auto;
+  -moz-transition: all, 1s;
+  -o-transition: all, 1s;
+  -webkit-transition: all, 1s;
+  transition: all, 1s;
+}
+
+img.loading {
+  opacity: 0;
+  width: 100%;
+}
+
+img.loaded {
+  opacity: 1;
+}
