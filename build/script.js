@@ -1,6 +1,6 @@
 ;(function() {
   'use strict';
-  //Selecting html elements
+  //Selecting DOM elements
   var imghero = document.getElementById('tilt-mover'),
       header = document.getElementById('header'),
       tilt = document.getElementById('tilt'),
@@ -12,3 +12,18 @@
         ev.preventDefault();
         body.classList.toggle('front');
       });
+
+  //Dynamic display for the images on the DOM window
+  var win = { width: window.innerWidth, height: window.innerHeight };
+  function throttle(fn, delay) {
+    var allowSample = true;
+    return function(e) {
+      if (allowSample) {
+        allowSample = false;
+        setTimeout(function() { allowSample = true; }, delay);
+        fn(e);
+      }
+    };
+  }
+
+}());
