@@ -43,3 +43,16 @@ h1, h2, h3 {
 label {
   font-family: "Viga", Helvetica, sans-serif;
 }
+
+body {
+  background: #212121;
+  overflow-x: hidden;
+  background-image: url("./../birds-darker.png");
+}
+body.front {
+  overflow: hidden;
+  height: 100vh;
+}
+body.front #main {
+  display: none;
+}
