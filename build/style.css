@@ -17,3 +17,8 @@ img.loading {
 img.loaded {
   opacity: 1;
 }
+
+body {
+  color: #bdc3c7;
+  font-family: "Viga", sans-serif;
+}
