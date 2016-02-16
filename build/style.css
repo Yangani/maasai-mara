@@ -102,3 +102,32 @@ header nav .icon {
 header nav .icon:hover, header nav .icon:focus {
   color: #bdc3c7;
 }
+
+@media screen and (min-width: 40em) {
+  header {
+    background-image: url("./../bg.jpg");
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-size: cover;
+  }
+}
+header #start {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  color: #ef5350;
+  font-size: 1em;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+header #start .start {
+  display: none;
+}
+header #start:disabled {
+  display: none;
+}
+header i.home {
+  font-size: 2em;
+}
