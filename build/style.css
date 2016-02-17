@@ -220,3 +220,19 @@ body.front header .tilt {
     transition: transform, 0.5s;
   }
 }
+
+
+.front-loader {
+  background-image: url("./../ellipsis.svg");
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+.ready .front-loader {
+  display: none;
+}
+
+.ready.front header nav {
+  display: block;
+}
