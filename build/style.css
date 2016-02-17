@@ -131,3 +131,30 @@ header #start:disabled {
 header i.home {
   font-size: 2em;
 }
+
+body.front header {
+  background-image: url("./../bg-mobile.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  transform: scale3d(1, 1, 1);
+  border-radius: 0;
+  top: 0;
+}
+body.front header #start {
+  width: 100%;
+  height: auto;
+}
+body.front header #start .start {
+  display: inline-block;
+  color: #bdc3c7;
+  border: 1px solid #bdc3c7;
+}
+body.front header h1 {
+  display: block;
+  margin: 0;
+  padding: 25vh 0.5em;
+}
+body.front header .tilt {
+  display: none;
+}
