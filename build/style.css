@@ -158,3 +158,65 @@ body.front header h1 {
 body.front header .tilt {
   display: none;
 }
+
+@media screen and (min-width: 40em) {
+  body.front header {
+    background-image: none;
+  }
+  body.front header h1, body.front header a, body.front header .front-loader, body.front header nav {
+    z-index: 9999;
+    opacity: 0.9;
+  }
+  body.front header .tilt {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  body.front header .tilt-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./../bg.jpg");
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-size: cover;
+  }
+  body.front header .tilt-back, body.front header .tilt-front {
+    opacity: 0.2;
+    -moz-transition: opacity, 0.5s;
+    -o-transition: opacity, 0.5s;
+    -webkit-transition: opacity, 0.5s;
+    transition: opacity, 0.5s;
+    -moz-transition: transform, 0.5s;
+    -o-transition: transform, 0.5s;
+    -webkit-transition: transform, 0.5s;
+    transition: transform, 0.5s;
+    moz-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+    transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+  }
+  body.front header .tilt-back {
+    z-index: -15;
+  }
+  body.front header .tilt-front {
+    z-index: -9;
+  }
+  body.front header .tilt-mover {
+    opacity: 0.6;
+    z-index: -10;
+    -moz-transition: transform, 0.5s;
+    -o-transition: transform, 0.5s;
+    -webkit-transition: transform, 0.5s;
+    transition: transform, 0.5s;
+  }
+}
