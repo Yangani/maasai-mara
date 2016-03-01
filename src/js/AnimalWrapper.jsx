@@ -6,6 +6,9 @@
     handleClick: function () {
       this.props.onClick(this);
     },
+
+    render: function() {
+    }
   });
 
 module.exports = AnimalWrapper;
