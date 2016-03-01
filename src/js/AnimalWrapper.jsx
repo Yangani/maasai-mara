@@ -2,8 +2,7 @@
 
   var AnimalImage = require('./AnimalImage.jsx');
 
-  var AnimlWrapper = React.createClass({
-   
+  var AnimalWrapper = React.createClass({
   });
 
 module.exports = AnimalWrapper;
