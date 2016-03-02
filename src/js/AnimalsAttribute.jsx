@@ -1,6 +1,13 @@
   var AnimalAttribute = React.createClass({
     render: function(){
-        }
+      var atts = this.props.attribute;
+      return (<ul className='center attribute clearfix list-reset'>
+        {atts.map(function(att, i) {
+          
+        })}
+        </ul>
+        ) ;
+    }
   });
 
   var AnimalAttributeItem = React.createClass({
