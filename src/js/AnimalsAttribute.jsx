@@ -3,7 +3,7 @@
       var atts = this.props.attribute;
       return (<ul className='center attribute clearfix list-reset'>
         {atts.map(function(att, i) {
-          
+          return(<AnimalAttributeItem key={i} bio={att.bio} link={att.link} author={att.author} index={i+1}/>)
         })}
         </ul>
         ) ;
