@@ -1,5 +1,7 @@
   var AnimalAttribute = React.createClass({
-
+    render: function(){
+        }
+  });
 
   var AnimalAttributeItem = React.createClass({
   render: function() {
