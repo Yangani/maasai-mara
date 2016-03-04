@@ -14,5 +14,9 @@ var chartOptions ={
     angleShowLineOut : false,
     scaleShowLabels : false,
     scaleBeginAtZero : true,
+    angleLineColor : "rgba(255,255,255,.3)",
+    scaleLineColor: "rgba(255,255,255,.4)",
+    angleLineWidth : 1,
+    responsive: true
 };
 
