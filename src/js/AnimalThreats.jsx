@@ -36,7 +36,10 @@ var chartOptions ={
 };
 
 var AnimalThreats = React.createClass({
-
+render: function(){
+  
+    return (<div className="threats clearfix"> <label className="meta block center"> Threats </label><div className="clearfix chart"><RadarChart width="1024" height="512" data={chartData} options={chartOptions}/></div></div>);
+  }
 });
 
 module.exports = AnimalThreats;
