@@ -39,7 +39,18 @@ var AnimalThreats = React.createClass({
 render: function(){
   var chartData = {
     labels: ["Habitat loss", "Climate change", "Alien Species", "Disease", "Fire", "Fishing Activities", "Other Human Activities", "Others"],
-   
+    datasets: [
+        {
+            label: "Threats",
+            fillColor: "rgba(239,83,80,0.4)",
+            strokeColor: "#ef5350",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: this.props.threats
+          }
+        ]
     };
     return (<div className="threats clearfix"> <label className="meta block center"> Threats </label><div className="clearfix chart"><RadarChart width="1024" height="512" data={chartData} options={chartOptions}/></div></div>);
   }
