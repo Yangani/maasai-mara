@@ -37,7 +37,10 @@ var chartOptions ={
 
 var AnimalThreats = React.createClass({
 render: function(){
-  
+  var chartData = {
+    labels: ["Habitat loss", "Climate change", "Alien Species", "Disease", "Fire", "Fishing Activities", "Other Human Activities", "Others"],
+   
+    };
     return (<div className="threats clearfix"> <label className="meta block center"> Threats </label><div className="clearfix chart"><RadarChart width="1024" height="512" data={chartData} options={chartOptions}/></div></div>);
   }
 });
