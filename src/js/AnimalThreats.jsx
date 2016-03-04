@@ -10,6 +10,9 @@ Chart.defaults.global.scaleStartValue=0;
 
 
 var chartOptions ={
-
+    scaleShowLine : true,
+    angleShowLineOut : false,
+    scaleShowLabels : false,
+    scaleBeginAtZero : true,
 };
 
