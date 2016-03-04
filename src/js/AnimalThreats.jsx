@@ -35,3 +35,8 @@ var chartOptions ={
     legendTemplate : ""
 };
 
+var AnimalThreats = React.createClass({
+
+});
+
+module.exports = AnimalThreats;
