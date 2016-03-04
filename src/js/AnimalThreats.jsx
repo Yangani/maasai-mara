@@ -7,3 +7,9 @@ Chart.defaults.global.scaleOverride=true;
 Chart.defaults.global.scaleSteps=1;
 Chart.defaults.global.scaleStepWidth=10;
 Chart.defaults.global.scaleStartValue=0;
+
+
+var chartOptions ={
+
+};
+
