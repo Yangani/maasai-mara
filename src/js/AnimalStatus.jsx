@@ -11,6 +11,11 @@
           <label>National </label> 
           <span className={transform(this.props.cmStatus)}>{this.props.cmStatus}</span>
         </div>
+        <div className = 'nswStatus'>
+          <label>NSW </label>
+          <span className={transform(this.props.nswStatus)}>{this.props.nswStatus.replace(/\s/g, "-")}</span>
+        </div>
+        </div>
       );
     }
   });
