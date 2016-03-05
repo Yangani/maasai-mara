@@ -18,6 +18,15 @@ var AnimalInfo = React.createClass({
           <div className="animal-hero">
           <AnimalImage src={src} alt = {this.props.data.commonName} />
           </div>
+          <div className='p2 animal-info'>
+          <div className="container">
+          <div className="close-btn-wrapper block clearfix">
+          <a className ="p2 inline-block right btn btn-close icon-cross" onClick = {this.handleClose}></a>
+          </div>
+          <div className="clearfix">
+          <AnimalTitle comName={this.props.data.commonName} sciName={this.props.data.scientificName}/>
+          <AnimalStatus cmStatus={this.props.data.commonwealthStatus} nswStatus ={this.props.data.nswStatus} />
+          </div>
           
         );
       } 
