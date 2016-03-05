@@ -2,7 +2,7 @@
   var AnimalStatus = React.createClass({
     render: function(){
       function transform(str){
-        var strNew = str.replace(/\s/g, "-");
+        var strNew = str.replace(/\s/g, "-").toLowerCase();
         return strNew;
       }
     }
