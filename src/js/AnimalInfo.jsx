@@ -11,7 +11,10 @@ var AnimalInfo = React.createClass({
     handleClose: function(){
       this.props.onClick(this);
     },
-   
+    render: function(){
+      var src = "image-url" + this.props.data.id + ".jpg";
+      
+      } 
   });
 
 module.exports = AnimalInfo;
