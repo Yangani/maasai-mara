@@ -27,7 +27,12 @@ var AnimalInfo = React.createClass({
           <AnimalTitle comName={this.props.data.commonName} sciName={this.props.data.scientificName}/>
           <AnimalStatus cmStatus={this.props.data.commonwealthStatus} nswStatus ={this.props.data.nswStatus} />
           </div>
-          
+          <AnimalStats stats={this.props.data.stats} statsFor={this.props.data.statsFor}/>
+          <AnimalThreats threats={this.props.data.threats}/>
+          <div className='profile center clearfix py4 px0'><a href={this.props.data.profile}>view animal profile on environment.gov.au<span className="icon icon-link-external"></span></a></div>
+          <AnimalAttribute attribute={this.props.data.attributes}/>
+          </div>
+      
         );
       } 
   });
