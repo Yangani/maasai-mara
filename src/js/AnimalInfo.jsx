@@ -13,7 +13,13 @@ var AnimalInfo = React.createClass({
     },
     render: function(){
       var src = "image-url" + this.props.data.id + ".jpg";
-      
+      return(
+          <div className="animal-card">
+          <div className="animal-hero">
+          <AnimalImage src={src} alt = {this.props.data.commonName} />
+          </div>
+          
+        );
       } 
   });
 
