@@ -6,14 +6,18 @@ var AnimalImage = React.createClass({
     };
   },
 
-  componentDidMount: function(){
-    var self = this;
-    var img = document.createElement('img');
-    img.onload = function(){
-      self.setState({ loaded: true});
-    };
-    img.src = this.props.src;
-  },
+  // componentDidMount: function(){
+  //   var self = this;
+  //   var img = document.createElement('img');
+  //   img.onload = function(){
+  //     self.setState({ loaded: true});
+  //   };
+  //   img.src = this.props.src;
+  // },
+
+  render: function(){
+    return (<img className = {this.state.loaded? "loaded" : "loading"} src = {this.props.src} alt ={this.props.alt} />); 
+  }
 });
 
 module.exports = AnimalImage;
