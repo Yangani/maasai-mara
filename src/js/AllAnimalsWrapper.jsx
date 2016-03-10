@@ -66,6 +66,20 @@
       } 
     },
 
+    handleClick: function (i) {
+      this.setState({
+        activeAnimalId: i,
+        wrapperClass:'opening',
+      });
+      body.classList.add("fix");
+      activeEl = this.el.getElementsByTagName('li')[i];
+      transitionEvent = this.whichTransitionEvent(activeEl);
+      if(transitionEvent){
+        activeEl.addEventListener(transitionEvent, this.listenerOpen);
+      }
+    },
+
+
     render: function(){
       //Get Active Animal
       var activeAnimal = this.state.data[this.state.activeAnimalId];
