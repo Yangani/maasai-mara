@@ -35,6 +35,22 @@
       if(activeAnimal){
         outputInfo = <AnimalInfo onClick = {this.handleClose} data={activeAnimal} />;
       };
+
+      return( 
+        <div className={this.state.wrapperClass}>
+        <div className="container animal-list-wrapper">
+        <ul className="p1 clearfix list-reset all-animals-wrapper" ref='animals'>
+           {this.state.data.map(function(animal, i) {
+            return (<AnimalWrapper onClick={this.handleClick.bind(this, i)} key={i} active={i === this.state.activeAnimalId ? 'active' : null } data={animal}/>);
+           }, this)}
+        </ul>
+        </div>
+        <div className ="animal-card-wrapper">
+        {outputInfo}
+        </div>
+        </div>
+        );
+      }
   });
 
 module.exports = AllAnimalsWrapper;
