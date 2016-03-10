@@ -89,6 +89,17 @@
           }
     },
 
+    listenerClose: function (event){
+      if((event.propertyName === "transform") || (event.propertyName === "-ms-transform" )||(event.propertyName === "-webkit-transform")){
+          body.classList.remove("fix");
+          this.setState({
+            wrapperClass: "closed",
+            activeAnimalId: null
+          });
+        event.target.removeEventListener(event.type, this.listenerClose);
+        }
+    },
+
     render: function(){
       //Get Active Animal
       var activeAnimal = this.state.data[this.state.activeAnimalId];
