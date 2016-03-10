@@ -43,6 +43,17 @@
       this.el = React.findDOMNode(animals);
     },
 
+    componentDidUpdate: function(){
+      if(!body.classList.contains("ready")){
+        animalImg = this.el.getElementsByTagName("img");
+        //check data loaded
+          if(animalImg.length === 16){
+            body.classList.add("ready");
+            buttonStart.disabled = false;
+          }
+      }
+    },
+    
     render: function(){
       //Get Active Animal
       var activeAnimal = this.state.data[this.state.activeAnimalId];
