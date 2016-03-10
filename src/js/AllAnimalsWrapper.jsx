@@ -38,6 +38,11 @@
       }.bind(this));
     },
 
+    componentDidMount:function(){
+      animals = this.refs.animals;
+      this.el = React.findDOMNode(animals);
+    },
+
     render: function(){
       //Get Active Animal
       var activeAnimal = this.state.data[this.state.activeAnimalId];
