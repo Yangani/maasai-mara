@@ -5,6 +5,21 @@
   var activeEl, transitionEvent, animals, animalImg;
 
   var AllAnimalsWrapper = React.createClass({
+    whichTransitionEvent: function(el){
+          var t;
+          var transitions = {
+            'transition':'transitionend',
+            'OTransition':'oTransitionEnd',
+            'MozTransition':'transitionend',
+            'WebkitTransition':'webkitTransitionEnd'
+          };
+          for(t in transitions){
+              if( el.style[t] !== undefined ){
+                  return transitions[t];
+              }
+          }
+    },
+
     getInitialState: function() {
     return {
       data: [],
