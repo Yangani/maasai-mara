@@ -28,6 +28,16 @@
       };
     },
 
+    componentWillMount: function() {
+      //prepare data
+      this.firebaseRef = new Firebase("https://endangered-animals-nsw.firebaseio.com/");
+      this.firebaseRef.on("child_added", function(dataSnapshot) {
+        this.setState({
+          data: this.state.data.concat(dataSnapshot.val())
+        });
+      }.bind(this));
+    },
+
     render: function(){
       //Get Active Animal
       var activeAnimal = this.state.data[this.state.activeAnimalId];
