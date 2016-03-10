@@ -53,7 +53,19 @@
           }
       }
     },
-    
+
+    handleClose: function(){
+      this.setState({
+        wrapperClass:'closing'
+      });
+
+      activeEl = this.el.querySelector('.active');
+      transitionEvent = this.whichTransitionEvent(activeEl);
+      if(transitionEvent){
+        activeEl.addEventListener(transitionEvent, this.listenerClose);
+      } 
+    },
+
     render: function(){
       //Get Active Animal
       var activeAnimal = this.state.data[this.state.activeAnimalId];
