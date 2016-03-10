@@ -27,6 +27,14 @@
       wrapperClass: 'closed' 
       };
     },
+
+    render: function(){
+      //Get Active Animal
+      var activeAnimal = this.state.data[this.state.activeAnimalId];
+      var outputInfo = null;
+      if(activeAnimal){
+        outputInfo = <AnimalInfo onClick = {this.handleClose} data={activeAnimal} />;
+      };
   });
 
 module.exports = AllAnimalsWrapper;
