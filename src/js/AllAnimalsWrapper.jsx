@@ -79,6 +79,15 @@
       }
     },
 
+    //seperate for better readability 
+    listenerOpen: function (event){
+      if((event.propertyName === "transform") || (event.propertyName === "-ms-transform" )||(event.propertyName === "-webkit-transform")){
+              this.setState({
+              wrapperClass: "open"
+            });
+        event.target.removeEventListener(event.type, this.listenerOpen);
+          }
+    },
 
     render: function(){
       //Get Active Animal
