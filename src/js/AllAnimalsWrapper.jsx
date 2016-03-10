@@ -5,7 +5,13 @@
   var activeEl, transitionEvent, animals, animalImg;
 
   var AllAnimalsWrapper = React.createClass({
-    
+    getInitialState: function() {
+    return {
+      data: [],
+      activeAnimalId: '',
+      wrapperClass: 'closed' 
+      };
+    },
   });
 
 module.exports = AllAnimalsWrapper;
