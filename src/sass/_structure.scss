@@ -89,3 +89,17 @@
     }
   }
 }
+
+ul.attribute{
+  a{
+    color: $light;
+    font-size: 0.8em;
+    &:hover, &:focus{
+      color: darken($light, 7%);
+
+    }
+    span{
+
+    }
+  }
+}
