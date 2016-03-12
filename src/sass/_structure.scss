@@ -1,0 +1,32 @@
+.status{
+  margin-bottom:0.5em;
+  label{
+    font-size: 0.8em;
+    width: 5em;
+    display: inline-block;
+    padding-right: 0.5em;
+    line-height: 0.8;
+  }
+  @media screen and (min-width: $sm){
+    text-align: right;
+    margin-top: 3.5em;
+
+  }
+  .critically-endangered{
+  color: $critically-endangered;
+  font-size: 1.2em;
+  }
+
+  .endangered{
+    color: $endangered;
+    font-size: 1.2em;
+  }
+
+  .vulnerable{
+    color: $vulnerable;
+
+  }
+  .presumed-extinct{
+    color: $presumed-extinct;
+  }
+}
