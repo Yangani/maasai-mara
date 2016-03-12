@@ -48,3 +48,12 @@
   from {color: #fff;}
   to {color: $red;}
 }
+
+
+.btn-close{
+  cursor: pointer;
+  &:hover, &:focus{
+    color: $red;
+  }
+}
+
