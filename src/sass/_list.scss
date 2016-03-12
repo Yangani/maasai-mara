@@ -6,3 +6,9 @@
   }
 }
 
+.animal-list-wrapper{
+    -webkit-transform: translate3d(0, 0, 0);
+    /* prevents flicker */
+    -webkit-overflow-scrolling: touch;
+  }
+//Sizes 
