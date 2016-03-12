@@ -73,3 +73,19 @@
     font-size: 1.3em;
   }
 }
+.threats{
+  text-align: center;
+  width: 100%;
+  label{
+    margin-bottom: 2em;
+  }
+  .chart{
+    margin: 0 auto;
+    width: 100%;
+
+    canvas{
+      max-width: 100%;
+      height: auto !important;
+    }
+  }
+}
