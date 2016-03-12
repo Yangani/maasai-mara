@@ -15,7 +15,7 @@
 }
 
 
-.animal-card-wrapper{
+.anima-card-wrapper{
    @extend %absolute;
    @include transition(all, $delay);
    .animal-hero{
