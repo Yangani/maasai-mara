@@ -44,3 +44,7 @@
   }
 }
 
+@include keyframes(color){
+  from {color: #fff;}
+  to {color: $red;}
+}
