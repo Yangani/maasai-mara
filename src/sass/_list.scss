@@ -49,6 +49,40 @@
 
   }
 
+%fade{
+  opacity: 0;
+    &.active{
+      opacity: 1;
+    }
+  .figcaption{
+    opacity: 0;
+  }
+}
+
+//State 
+.animal-wrapper{
+  overflow: hidden;
+  @include transition(all, 0.5s);
+  &.active{
+      @include transition(all, $delay);
+      @include scale(1);
+    }
+   
+  .opening &{
+    @extend %fade;
+    &.active{
+      @include scale(0);
+      //opacity: 0.1;
+    }
+  }
+  .open &{
+    @extend %fade;
+      &.active{
+      //opacity: 0;
+      @include scale(0);
+    }
+  }
+
   .closing &{
     @extend %fade;
     &.active{
