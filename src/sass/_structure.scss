@@ -30,3 +30,17 @@
     color: $presumed-extinct;
   }
 }
+
+
+.stats{
+  text-align: center;
+  margin: 3em auto;
+
+  .number{
+    font-size: 4em;
+    @include animation(2s, 5s, color);
+    color: $red;
+
+  }
+}
+
