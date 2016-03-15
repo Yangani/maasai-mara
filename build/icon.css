@@ -26,3 +26,15 @@
 .icon-arrow-left:before {
 	content: "\e606";
 }
+.icon-link-external:before {
+	content: "\e600";
+}
+.icon-info:before {
+	content: "\e601";
+}
+.icon-cross:before {
+	content: "\e602";
+}
+.icon-animal:before {
+	content: "\e603";
+}
