@@ -1,0 +1,82 @@
+%fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    /* prevents flicker */
+    -webkit-overflow-scrolling: touch;
+}
+
+%absolute{
+   position: absolute;
+   overflow: hidden;
+}
+
+
+.animal-card-wrapper{
+   @extend %absolute;
+   @include transition(all, $delay);
+   .animal-hero{
+    @include transition(all, $delay);
+    line-height: 1;
+    height: 29.412vw;
+    background: url("./../animals.png");
+    img{
+      height: 29.412vw;
+      width: auto;
+      max-width: 100%;
+      overflow: hidden;
+    }
+   }
+   .animal-info{
+    @include transition(all, $delay);
+    background-color: $darker;
+    background-image: url("./../animals-dark.png");
+    z-index: 100;
+   }
+  .opening &{
+    overflow: hidden;
+    .animal-hero{
+      @include translate(0, -100%);
+    }
+    .animal-info{
+      @include translate(0, 100%);
+    }
+  }
+  .open &{
+    @extend %fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+
+    .animal-hero{
+      @include translate(0, 0);
+    }
+    .animal-info{
+      @include translate(0, 0);
+      min-height: calc(100vh - 30vw);
+    }
+  }
+  .closing &{
+    overflow: hidden;
+    @extend %fixed;
+    .animal-hero{
+      @include translate(0, -100%);
+    }
+    .animal-info{
+      @include translate(0, 100%);
+    }
+
+  }
+  .closed &{
+  }
+  h1{
+    margin: 0.5em 0;
+  }
+}
+
+
+
+

@@ -1,0 +1,105 @@
+.status{
+  margin-bottom:0.5em;
+  label{
+    font-size: 0.8em;
+    width: 5em;
+    display: inline-block;
+    padding-right: 0.5em;
+    line-height: 0.8;
+  }
+  @media screen and (min-width: $sm){
+    text-align: right;
+    margin-top: 3.5em;
+
+  }
+  .critically-endangered{
+  color: $critically-endangered;
+  font-size: 1.2em;
+  }
+
+  .endangered{
+    color: $endangered;
+    font-size: 1.2em;
+  }
+
+  .vulnerable{
+    color: $vulnerable;
+
+  }
+  .presumed-extinct{
+    color: $presumed-extinct;
+  }
+}
+
+
+.stats{
+  text-align: center;
+  margin: 3em auto;
+
+  .number{
+    font-size: 4em;
+    @include animation(2s, 5s, color);
+    color: $red;
+
+  }
+}
+
+@include keyframes(color){
+  from {color: #fff;}
+  to {color: $red;}
+}
+
+
+.btn-close{
+  cursor: pointer;
+  &:hover, &:focus{
+    color: $red;
+  }
+}
+
+.profile{
+  a{
+    padding-right: 2em;
+    position: relative;
+  }
+  span.icon{
+    display: inline-block;
+    padding-left: 0.3em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1.5em;
+    height: 1.1em;
+    font-size: 1.3em;
+  }
+}
+.threats{
+  text-align: center;
+  width: 100%;
+  label{
+    margin-bottom: 2em;
+  }
+  .chart{
+    margin: 0 auto;
+    width: 100%;
+
+    canvas{
+      max-width: 100%;
+      height: auto !important;
+    }
+  }
+}
+
+ul.attribute{
+  a{
+    color: $light;
+    font-size: 0.8em;
+    &:hover, &:focus{
+      color: darken($light, 7%);
+
+    }
+    span{
+
+    }
+  }
+}

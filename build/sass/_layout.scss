@@ -1,0 +1,31 @@
+body{
+  background: $dark;
+  overflow-x: hidden;
+  background-image: url("./../animals-darker.png");
+  &.front{
+    overflow: hidden;
+    height: 100vh;
+    #main{
+      display: none;
+    }
+  }
+}
+
+#content{
+  min-height: 100vh;
+}
+
+.fix{
+  overflow-y: hidden;
+  padding-right: 0;
+  @media screen and (min-width: $sm){
+    padding-right: 1em;
+  }
+}
+
+.all-animals-wrapper{
+  max-width: 30em;
+  margin: 0 auto;
+  padding-bottom: 15em;
+}
+

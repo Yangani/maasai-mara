@@ -1,0 +1,99 @@
+@mixin active{
+  color: $red;
+  img{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+  }
+}
+
+.animal-list-wrapper{
+    -webkit-transform: translate3d(0, 0, 0);
+    /* prevents flicker */
+    -webkit-overflow-scrolling: touch;
+  }
+//Sizes 
+.animal-wrapper{
+  cursor: pointer;
+  color: $grey;
+  @include transition(all, 0.1s, ease-out);
+  figure{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    background: url("./../ring.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc((100vw - 3em)*0.625);
+    max-height: 18.125em;
+    background-color: lighten($dark, 10%);
+    overflow: hidden;
+    img{
+      -webkit-filter: grayscale(100%); 
+      filter: grayscale(100%);
+      }
+    }
+    h3{
+      margin-top: 0.5em;
+      text-transform: uppercase;
+    }
+    &.active{
+      @include active;
+    }
+
+    @media screen and (min-width: $md){
+      &:hover, &:focus{
+       @include active;
+     }
+    }
+
+  }
+
+%fade{
+  opacity: 0;
+    &.active{
+      opacity: 1;
+    }
+  .figcaption{
+    opacity: 0;
+  }
+}
+
+//State 
+.animal-wrapper{
+  overflow: hidden;
+  @include transition(all, 0.5s);
+  &.active{
+      @include transition(all, $delay);
+      @include scale(1);
+    }
+   
+  .opening &{
+    @extend %fade;
+    &.active{
+      @include scale(0);
+      //opacity: 0.1;
+    }
+  }
+  .open &{
+    @extend %fade;
+      &.active{
+      //opacity: 0;
+      @include scale(0);
+    }
+  }
+
+  .closing &{
+    @extend %fade;
+    &.active{
+      //@include transition(all, 5s);
+      @include scale(1);
+    }
+  }
+  .closed &{
+    &.active{
+    }
+  }
+}
+
+
